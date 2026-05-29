@@ -1,0 +1,15 @@
+# Operating System files (system trash)
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Code Editor configs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+
+# Log files
+*.log
+npm-debug.log*

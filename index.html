@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Manage Your Tasks</title>
+    
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+   
+    <div class="container">
+        
+       
+        <header>
+            <h1><i class="fas fa-tasks"></i> TaskFlow</h1>
+            <p class="subtitle">Organize your day, achieve your goals</p>
+            
+            
+            <button id="themeToggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        
+        <div class="task-input-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="✍️ What do you need to do today?"
+                    autocomplete="off"
+                >
+                <button id="addTaskBtn" class="add-btn">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+            
+            <p id="errorMessage" class="error-message"></p>
+        </div>
+
+        
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-list"></i> All
+            </button>
+            <button class="filter-btn" data-filter="pending">
+                <i class="fas fa-clock"></i> Pending
+            </button>
+            <button class="filter-btn" data-filter="completed">
+                <i class="fas fa-check-circle"></i> Completed
+            </button>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <p>Total: <span id="totalTasks">0</span></p>
+            <p>Pending: <span id="pendingTasks">0</span></p>
+            <p>Completed: <span id="completedTasks">0</span></p>
+        </div>
+
+        
+        <ul id="taskList" class="task-list">
+            
+        </ul>
+
+        
+        <div id="emptyState" class="empty-state">
+            <i class="fas fa-clipboard-list"></i>
+            <h3>No tasks yet!</h3>
+            <p>Add your first task above and start being productive 🚀</p>
+        </div>
+
+        
+        <button id="clearCompletedBtn" class="clear-btn">
+            <i class="fas fa-trash-alt"></i> Clear Completed
+        </button>
+
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
